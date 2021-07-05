@@ -1,0 +1,34 @@
+﻿<Window x:Class="wpf_task_three.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_task_three"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="351.467" Width="822.347" WindowStyle="SingleBorderWindow" ResizeMode="NoResize" Background="LightGreen">
+    <Grid HorizontalAlignment="Right" Margin="0,0,-0.4,0" Width="794">
+        <Grid.RowDefinitions >
+            <RowDefinition  Height ="* "/>
+            <RowDefinition   Height="2* "/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row=" 1">
+            <TextBox x:Name="all" Margin=" 10"  Foreground="DarkGoldenrod" TextChanged="all_TextChanged"  >
+
+            </TextBox>
+        </Grid>
+        <Grid  Grid.Row=" 0">
+            <StackPanel Orientation="Horizontal" x:Name="mystack" >
+                <TextBox Width=" 180" Height=" 40"  x:Name="text" Foreground="DarkGoldenrod" IsEnabled="False" TextChanged="text_TextChanged"  ></TextBox>
+                <Button x:Name="Openbtn" Margin=" 20"  Width=" 50" Content=" Open" Height=" 50" Background="LimeGreen " Click="Openbtn_Click"      />
+                <Button x:Name="Savebtn" Margin=" 20" Width=" 50" Content=" Save" Height=" 50" IsEnabled="False"  Background="LimeGreen" Click="Savebtn_Click"      />
+                <!--<local:ToggleSwitchUc x:Name ="togglesw" HorizontalAlignment="Left" Height="31"  VerticalAlignment="Center"  Width="47"/>-->
+                <local:ToggleSwitchUc  Height=" 50" Width=" 50" VerticalAlignment="Center"  x:Name ="togglesw" HorizontalAlignment="Left"></local:ToggleSwitchUc>
+                <Button x:Name="Cutbtn" Margin=" 20" Width=" 50" Content=" Cut" Height=" 50" Background="LimeGreen" IsEnabled="False"  Click="Cutbtn_Click"      />
+                <Button x:Name="Copybtn" Margin=" 20" Width=" 50" Content=" Copy" Height=" 50" Background="LimeGreen" IsEnabled="False"  Click="Copybtn_Click"      />
+                <Button x:Name="Pastebtn" Margin=" 20" Width=" 50" Content=" Paste" Height=" 50" IsEnabled="False"  Background="LimeGreen" Click="Pastebtn_Click"      />
+                <Button x:Name="SelectAllbtn" Margin=" 20" Width=" 60" Content=" Select all" Height="40" IsEnabled="False"  Background="LimeGreen" Click="SelectAllbtn_Click"      />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>
